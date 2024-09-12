@@ -4,6 +4,8 @@ body {
 h1 {
     font-size: 4em;
     text-align: center;
+    margin: 0;
+    transition: all 0.3s ease;
 }
 
 .memSlider{
@@ -11,7 +13,7 @@ h1 {
 }
 
 .sliderContainer {
-    width: 70%;
+    width: 45%;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -40,7 +42,7 @@ input[name='switch'] {
     display: none;
 }
 .definitionWrap {
-    width: 50%;
+    width: 45%;
     overflow: hidden;
 }
 .definition {
@@ -50,9 +52,9 @@ input[name='switch'] {
     transition: all 1s ease-in-out;
 }
 div p {
-    font-size: 2em;
+    font-size: 1.3em;
     width: 100%;
-    margin: 0;
+    margin: 5% 0;
 }
 .pWrap {
     width: 16.7%;
@@ -60,11 +62,12 @@ div p {
 
 
 .controlsContainer {
-    width: 50%;
+    width: 55%;
     display: flex;
     justify-content: right;
     column-gap: 1%;
     margin: 5% 0;
+    flex-shrink: 1;
 }
 .control {
     background-color: lightblue;
@@ -134,7 +137,7 @@ div p {
 }
 
 
-@media screen and (width < 768px)  {
+@media screen and (width < 791px)  {
     .definitionContainer {
         display: flex;
         flex-direction: column-reverse;
@@ -147,5 +150,27 @@ div p {
     }
     .definitionWrap {
         width: 100%;
+    }
+    h1 {
+        font-size: 2em;
+        transition: all 0.3s ease;
+    }
+    .control {
+        height: 1.5em;
+        width: 1.5em; 
+    }
+}
+
+@media screen and (width < 400px)  {
+    h1 {
+        font-size: 1.5em;
+        transition: all 0.3s ease;
+    }
+    .control {
+        height: 1.0em;
+        width: 1.0em; 
+    }
+    div p {
+        font-size: 1em;
     }
 }
