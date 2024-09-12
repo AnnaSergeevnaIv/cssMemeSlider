@@ -16,13 +16,13 @@ h1 {
     overflow: hidden;
 }
 .slider {
-    width: 200%;
+    width: 600%;
     display: flex;
     justify-content: left;
     transition: all 1s ease-in-out;
 }
 .slide {
-    width: 50%;
+    width: 16.7%;
 }
 .slide img {
     width: 100%;
@@ -40,12 +40,11 @@ input[name='switch'] {
     display: none;
 }
 .definitionWrap {
-    width: 30%;
-    /* display: flex; */
+    width: 50%;
     overflow: hidden;
 }
 .definition {
-    width: 200%;
+    width: 600%;
     display: flex;
     justify-content: left;
     transition: all 1s ease-in-out;
@@ -53,10 +52,10 @@ input[name='switch'] {
 div p {
     font-size: 2em;
     width: 100%;
+    margin: 0;
 }
 .pWrap {
-    /* display: inline; */
-    width: 50%;
+    width: 16.7%;
 }
 
 
@@ -65,6 +64,7 @@ div p {
     display: flex;
     justify-content: right;
     column-gap: 1%;
+    margin: 5% 0;
 }
 .control {
     background-color: lightblue;
@@ -77,9 +77,6 @@ div p {
     cursor: pointer;
     background-color:aquamarine;
 }
-.control:active {
-    background-color: lightgreen;
-}
 
 #switcher1:checked ~ .slider {
     margin-left: 0;
@@ -87,12 +84,55 @@ div p {
 #switcher2:checked ~ .slider {
     margin-left: -100%;
 }
+#switcher3:checked ~ .slider {
+    margin-left: -200%;
+}
+#switcher4:checked ~ .slider {
+    margin-left: -300%;
+}
+#switcher5:checked ~ .slider {
+    margin-left: -400%;
+}
+#switcher6:checked ~ .slider {
+    margin-left: -500%;
+}
 #switcher1:checked ~ .definitionContainer .definition {
     margin-left: 0;
 }
 #switcher2:checked ~ .definitionContainer .definition {
     margin-left: -100%;
 }
+#switcher3:checked ~ .definitionContainer .definition {
+    margin-left: -200%;
+}
+#switcher4:checked ~ .definitionContainer .definition {
+    margin-left: -300%;
+}
+#switcher5:checked ~ .definitionContainer .definition {
+    margin-left: -400%;
+}
+#switcher6:checked ~ .definitionContainer .definition {
+    margin-left: -500%;
+}
+#switcher1:checked ~ .definitionContainer .controlsContainer label[for = 'switcher1'] {
+    background-color: lightgreen;
+}
+#switcher2:checked ~ .definitionContainer .controlsContainer label[for = 'switcher2'] {
+    background-color: lightgreen;
+}
+#switcher3:checked ~ .definitionContainer .controlsContainer label[for = 'switcher3'] {
+    background-color: lightgreen;
+}
+#switcher4:checked ~ .definitionContainer .controlsContainer label[for = 'switcher4'] {
+    background-color: lightgreen;
+}
+#switcher5:checked ~ .definitionContainer .controlsContainer label[for = 'switcher5'] {
+    background-color: lightgreen;
+}
+#switcher6:checked ~ .definitionContainer .controlsContainer label[for = 'switcher6'] {
+    background-color: lightgreen;
+}
+
 
 @media screen and (width < 768px)  {
     .definitionContainer {
@@ -104,7 +144,6 @@ div p {
     .controlsContainer {
         width: 100%;
         justify-content: center;
-        margin-top: 5%;
     }
     .definitionWrap {
         width: 100%;
