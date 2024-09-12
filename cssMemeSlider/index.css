@@ -11,7 +11,7 @@ h1 {
 }
 
 .sliderContainer {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -40,18 +40,23 @@ input[name='switch'] {
     display: none;
 }
 .definitionWrap {
-    width: 50%;
-    display: flex;
+    width: 30%;
+    /* display: flex; */
     overflow: hidden;
 }
 .definition {
     width: 200%;
     display: flex;
     justify-content: left;
+    transition: all 1s ease-in-out;
 }
-.definition p {
+div p {
     font-size: 2em;
     width: 100%;
+}
+.pWrap {
+    /* display: inline; */
+    width: 50%;
 }
 
 
@@ -82,16 +87,26 @@ input[name='switch'] {
 #switcher2:checked ~ .slider {
     margin-left: -100%;
 }
-#switcher1:checked ~ .definitionContainer:first-child{
-   background-color: black
-}
-#switcher1:checked ~ .definition {
+#switcher1:checked ~ .definitionContainer .definition {
     margin-left: 0;
 }
-#switcher2:checked ~ .definition {
+#switcher2:checked ~ .definitionContainer .definition {
     margin-left: -100%;
 }
 
-
-
-
+@media screen and (width < 768px)  {
+    .definitionContainer {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    .controlsContainer {
+        width: 100%;
+        justify-content: center;
+        margin-top: 5%;
+    }
+    .definitionWrap {
+        width: 100%;
+    }
+}
