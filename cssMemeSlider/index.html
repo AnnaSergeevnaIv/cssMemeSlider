@@ -5,9 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mem slider</title>
     <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
+
 </head>
 <body>
-    
+    <h1>Mem Slider</h1>
+    <section class="memSlider">
+        <div class="sliderContainer">
+            <input type="radio" name="switch" id="switcher1" checked>
+            <input type="radio" name="switch" id="switcher2">
+            <div class="slider">
+                <div class="slide mover">
+                    <img src="assets/1.jpg" alt="First mem">
+                </div>
+                <div class="slide mover">
+                    <img src="assets/2.jpeg" alt="Second mem">
+                </div>
+            </div>
+            <div class="definitionContainer">
+                <div class="definitionWrap">
+                    <input type="radio" name="switch" id="switcher1" checked>
+                    <input type="radio" name="switch" id="switcher2">
+                    <div class="definition">
+                        <p>First mem</p>
+                        <p>Second mem</p>
+                    </div>
+                </div>
+                <div class="controlsContainer">
+                    <label for="switcher1" class="control"></label>
+                    <label for="switcher2"class="control"></label>
+                </div>
+            </div>
+            
+        </div>
+    </section>
 </body>
 </html>
