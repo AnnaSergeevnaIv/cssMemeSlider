@@ -1,0 +1,231 @@
+body {
+    width: 100vw;
+}
+h1 {
+    font-size: 4em;
+    text-align: center;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+.memSlider{
+    width: 100%;
+}
+
+.sliderContainer {
+    width: 45%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.slider {
+    width: 600%;
+    display: flex;
+    justify-content: left;
+    transition: all 1s ease-in-out;
+}
+.slide {
+    width: 16.7%;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.definitionContainer {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+input[name='switch'] {
+    display: none;
+}
+.definitionWrap {
+    width: 45%;
+    overflow: hidden;
+}
+.definition {
+    width: 600%;
+    height: 5em;
+    display: flex;
+    justify-content: left;
+    transition: all 1s ease-in-out;
+    padding: 5% 0;
+    margin: 5% 0;
+}
+div p {
+    font-size: 1.3em;
+    width: 100%;
+    margin: 5% 0;
+}
+.pWrap {
+    width: 16.7%;
+}
+
+
+.controlsContainer {
+    width: 55%;
+    display: flex;
+    justify-content: right;
+    column-gap: 1%;
+    flex-shrink: 1;
+    margin: 5% 0;
+}
+.control {
+    background-color: lightblue;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    
+}
+.control:hover {
+    cursor: pointer;
+    background-color:aquamarine;
+}
+.control[type='hidden'] {
+    opacity: 0;
+}
+.labelWrap {
+    display: flex;
+    flex-direction: column; 
+}
+.labelWrap:hover {
+    cursor: pointer;
+}
+.labelWrap:hover > .control {
+    cursor: pointer;
+    background-color:aquamarine;
+}
+#switcher1:checked ~ .slider {
+    margin-left: 0;
+}
+#switcher2:checked ~ .slider {
+    margin-left: -100%;
+}
+#switcher3:checked ~ .slider {
+    margin-left: -200%;
+}
+#switcher4:checked ~ .slider {
+    margin-left: -300%;
+}
+#switcher5:checked ~ .slider {
+    margin-left: -400%;
+}
+#switcher6:checked ~ .slider {
+    margin-left: -500%;
+}
+#switcher1:checked ~ .definitionContainer .definition {
+    margin-left: 0;
+}
+#switcher2:checked ~ .definitionContainer .definition {
+    margin-left: -100%;
+}
+#switcher3:checked ~ .definitionContainer .definition {
+    margin-left: -200%;
+}
+#switcher4:checked ~ .definitionContainer .definition {
+    margin-left: -300%;
+}
+#switcher5:checked ~ .definitionContainer .definition {
+    margin-left: -400%;
+}
+#switcher6:checked ~ .definitionContainer .definition {
+    margin-left: -500%;
+}
+#switcher1:checked ~ .definitionContainer .controlsContainer label[for = 'switcher1'] {
+    background-color: lightgreen;
+}
+#switcher1:checked ~ .definitionContainer .labelWrap:hover > label[for="switcher1"] {
+    background-color: greenyellow;
+}
+
+#switcher2:checked ~ .definitionContainer .controlsContainer label[for = 'switcher2'] {
+    background-color: lightgreen;
+}
+#switcher2:checked ~ .definitionContainer .labelWrap:hover > label[for="switcher2"] {
+    background-color: greenyellow;
+}
+#switcher3:checked ~ .definitionContainer .controlsContainer label[for = 'switcher3'] {
+    background-color: lightgreen;
+}
+#switcher3:checked ~ .definitionContainer .labelWrap:hover > label[for="switcher3"] {
+    background-color: greenyellow;
+}
+#switcher4:checked ~ .definitionContainer .controlsContainer label[for = 'switcher4'] {
+    background-color: lightgreen;
+}
+#switcher4:checked ~ .definitionContainer .labelWrap:hover > label[for="switcher4"] {
+    background-color: greenyellow;
+}
+#switcher5:checked ~ .definitionContainer .controlsContainer label[for = 'switcher5'] {
+    background-color: lightgreen;
+}
+#switcher5:checked ~ .definitionContainer .labelWrap:hover > label[for="switcher5"] {
+    background-color: greenyellow;
+}
+#switcher6:checked ~ .definitionContainer .controlsContainer label[for = 'switcher6'] {
+    background-color: lightgreen;
+}
+#switcher6:checked ~ .definitionContainer .labelWrap:hover > label[for="switcher6"] {
+    background-color: greenyellow;
+}
+
+
+@media screen and (width < 791px)  {
+    .definitionContainer {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: start;
+    }
+    .definition {
+        padding: 0;
+    }
+    .controlsContainer {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+    .definitionWrap {
+        width: 100%;
+    }
+    h1 {
+        font-size: 2em;
+        transition: all 0.3s ease;
+    }
+    .control {
+        height: 1.5em;
+        width: 1.5em; 
+    }
+    div p {
+        margin: 0;
+    }
+    .control[type='hidden'] {
+        width: 2em;
+        height: 1em;
+    }
+    .labelWrap {
+        display: flex;
+        flex-direction: column; 
+    }
+
+}
+
+@media screen and (width < 448px)  {
+    h1 {
+        font-size: 1.5em;
+        transition: all 0.3s ease;
+    }
+    .control {
+        height: 1.0em;
+        width: 1.0em; 
+    }
+    .control[type='hidden'] {
+        width: 1em;
+        height: 1em;
+    }
+    div p {
+        font-size: 1em;
+    }
+}
